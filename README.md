@@ -36,7 +36,11 @@ gunicorn --bind 127.0.0.1:8000 app:app
 
 ## Despliegue Render
 
+Servicio activo: `https://gogreen-meta-messaging-webhook.onrender.com`
+
 - Runtime: Python
 - Build: `pip install -r requirements.txt`
 - Start: `gunicorn --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 60 app:app`
 - Health check: `/healthz`
+
+La activación final de Messenger/WhatsApp está documentada en [`docs/META_SETUP.md`](docs/META_SETUP.md).
